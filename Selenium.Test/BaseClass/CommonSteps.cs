@@ -6,6 +6,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using CsQuery;
+    using NUnit.Framework;
     using NUnit.Framework.Constraints;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
@@ -75,7 +76,7 @@
             actual = this.RemoveWhiteSpace(actual);
             expected = this.RemoveWhiteSpace(expected);
 
-            actual.ShouldBeEquivalentTo(expected);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
