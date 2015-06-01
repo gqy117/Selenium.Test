@@ -5,7 +5,6 @@
     using System.Linq;
     using System.Text.RegularExpressions;
     using CsQuery;
-    using FluentAssertions;
     using OpenQA.Selenium.Chrome;
     using TechTalk.SpecFlow;
 

@@ -6,7 +6,6 @@
     using System.Text;
     using System.Threading.Tasks;
     using CsQuery;
-    using FluentAssertions;
     using NUnit.Framework.Constraints;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;

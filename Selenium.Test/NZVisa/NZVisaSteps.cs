@@ -4,7 +4,6 @@
     using System.Linq;
     using System.Text.RegularExpressions;
     using CsQuery;
-    using FluentAssertions;
     using NUnit.Framework;
     using TechTalk.SpecFlow;
 
