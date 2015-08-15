@@ -7,8 +7,8 @@
     <ProjectGuid>{E3495109-C2AA-4383-B968-235F994F5095}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Selenium.Test</RootNamespace>
-    <AssemblyName>Selenium.Test</AssemblyName>
+    <RootNamespace>Specflow.Common</RootNamespace>
+    <AssemblyName>Specflow.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
@@ -67,18 +67,6 @@
     <Compile Include="BaseClass\CommonSteps.cs" />
     <Compile Include="BaseClass\WebDriverFactory.cs" />
     <Compile Include="BaseClass\NormalStepBase.cs" />
-    <Compile Include="NZImmigration\NZImmigration.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NZImmigration.feature</DependentUpon>
-    </Compile>
-    <Compile Include="NZImmigration\NZImmigrationSteps.cs" />
-    <Compile Include="NZVisa\NZVisa.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NZVisa.feature</DependentUpon>
-    </Compile>
-    <Compile Include="NZVisa\NZVisaSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseClass\TestBase.cs" />
   </ItemGroup>
@@ -95,25 +83,11 @@
     <None Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
     </None>
-    <None Include="NZImmigration\NZImmigration.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>NZImmigration.feature.cs</LastGenOutput>
-    </None>
-    <None Include="NZVisa\NZVisa.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>NZVisa.feature.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="chromedriver.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="NZImmigration\NZImmigration.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="NZVisa\NZVisa.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="phantomjs.exe">

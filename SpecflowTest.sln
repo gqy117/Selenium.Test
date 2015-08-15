@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow.Common", "Selenium.Test\Specflow.Common.csproj", "{E3495109-C2AA-4383-B968-235F994F5095}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2C1856C1-4649-4B58-BB60-AFAF38AD60AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Specflow.NZ", "Specflow.NZ\Specflow.NZ.csproj", "{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,12 @@ Global
 		{E3495109-C2AA-4383-B968-235F994F5095}.PhantomJS|Any CPU.Build.0 = PhantomJS|Any CPU
 		{E3495109-C2AA-4383-B968-235F994F5095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3495109-C2AA-4383-B968-235F994F5095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}.PhantomJS|Any CPU.ActiveCfg = Release|Any CPU
+		{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}.PhantomJS|Any CPU.Build.0 = Release|Any CPU
+		{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E70FE6A5-395F-41BA-B701-A6B8A9E3B0B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
