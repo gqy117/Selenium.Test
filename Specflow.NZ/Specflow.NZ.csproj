@@ -73,7 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="NZImmigration\NZImmigration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>NZImmigration.feature.cs</LastGenOutput>
@@ -100,7 +102,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Selenium.Test\Specflow.Common.csproj">
+    <ProjectReference Include="..\Specflow.Common\Specflow.Common.csproj">
       <Project>{e3495109-c2aa-4383-b968-235f994f5095}</Project>
       <Name>Specflow.Common</Name>
     </ProjectReference>
