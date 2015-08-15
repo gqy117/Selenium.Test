@@ -1,4 +1,4 @@
-﻿namespace Selenium.Test.NZVisa
+﻿namespace Specflow.Common.NZVisa
 {
     using System;
     using System.Linq;

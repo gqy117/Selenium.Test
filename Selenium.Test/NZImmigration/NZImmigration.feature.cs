@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Selenium.Test.NZImmigration
+namespace Specflow.Common.NZImmigration
 {
     using TechTalk.SpecFlow;
     

@@ -1,4 +1,4 @@
-﻿namespace Selenium.Test.NZImmigration
+﻿namespace Specflow.Common.NZImmigration
 {
     using System;
     using System.Collections.Generic;

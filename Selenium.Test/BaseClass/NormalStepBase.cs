@@ -1,4 +1,4 @@
-﻿namespace Selenium.Test
+﻿namespace Specflow.Common
 {
     using System;
     using System.Collections.Generic;

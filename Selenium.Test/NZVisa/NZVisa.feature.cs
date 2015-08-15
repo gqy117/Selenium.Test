@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Selenium.Test.NZVisa
+namespace Specflow.Common.NZVisa
 {
     using TechTalk.SpecFlow;
     
