@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -33,6 +34,7 @@
         [When(@"I open the page '(.*)'")]
         public void WhenIOpenPage(string url)
         {
+            url = this.AddBaseUrl(url);
             this.OpenPage(url);
         }
 
@@ -77,6 +79,15 @@
             expected = this.RemoveWhiteSpace(expected);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [Then(@"the current url should be '(.*)'")]
+        public void ThenTheCurrentUrlShouldBe(string expectedUrl)
+        {
+            expectedUrl = this.AddBaseUrl(expectedUrl);
+            var actualUrl = this.Browser.Url;
+
+            Assert.AreEqual(expectedUrl, actualUrl);
         }
     }
 }

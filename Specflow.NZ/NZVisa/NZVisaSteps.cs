@@ -8,11 +8,7 @@
     using TechTalk.SpecFlow;
 
     [Binding]
-    public class NZVisaSteps : NormalStepBase
+    public class NZVisaSteps : StepsBase
     {
-        public NZVisaSteps(CommonSteps commonSteps)
-            : base(commonSteps)
-        {
-        }
     }
 }

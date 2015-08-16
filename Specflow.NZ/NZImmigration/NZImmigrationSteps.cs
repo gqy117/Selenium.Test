@@ -9,11 +9,8 @@
     using TechTalk.SpecFlow;
 
     [Binding]
-    public class NZImmigrationSteps : NormalStepBase
+    [Scope(Feature = "NZImmigration")]
+    public class NZImmigrationSteps : StepsBase
     {
-        public NZImmigrationSteps(CommonSteps commonSteps)
-            : base(commonSteps)
-        {
-        }
     }
 }

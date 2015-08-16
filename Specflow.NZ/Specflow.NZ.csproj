@@ -41,6 +41,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseClasses\StepsBase.cs" />
     <Compile Include="NZImmigration\NZImmigration.feature.cs">
       <DependentUpon>NZImmigration.feature</DependentUpon>
       <AutoGen>True</AutoGen>
