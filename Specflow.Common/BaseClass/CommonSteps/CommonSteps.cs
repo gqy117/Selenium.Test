@@ -5,7 +5,9 @@
     using System.Configuration;
     using System.Linq;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
+    using BoDi;
     using CsQuery;
     using NUnit.Framework;
     using NUnit.Framework.Constraints;
@@ -16,14 +18,31 @@
     using TechTalk.SpecFlow;
 
     [Binding]
-    public class CommonSteps : TestBase
+    public partial class CommonSteps : TestBase
     {
-        public CommonSteps()
+        private readonly IObjectContainer _objectContainer;
+
+        private string baseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+
+        public override string BaseUrl
         {
-            this.Browser = WebDriverFactory.CreateWebDriver();
+            get { return this.baseUrl; }
+            set { this.baseUrl = value; }
         }
 
-        public override RemoteWebDriver Browser { get; set; }
+        public CommonSteps(IObjectContainer objectContainer)
+        {
+            _objectContainer = objectContainer;
+        }
+
+        [BeforeScenario]
+        public void InitializeWebDriver()
+        {
+            var webDriver = WebDriverFactory.CreateWebDriver();
+            _objectContainer.RegisterInstanceAs<RemoteWebDriver>(webDriver);
+
+            this.Browser = webDriver;
+        }
 
         [Given(@"the information")]
         public void GivenInformation(Table table)
@@ -34,7 +53,6 @@
         [When(@"I open the page '(.*)'")]
         public void WhenIOpenPage(string url)
         {
-            url = this.AddBaseUrl(url);
             this.OpenPage(url);
         }
 
@@ -56,38 +74,22 @@
             this.FillTheFormById(table, this.UserInfo);
         }
 
-        [When(@"I click the submit button by name '(.*)'")]
-        public void WhenIClickSubmitByName(string buttonName)
+        [When(@"I click the button by name '(.*)'")]
+        public void WhenIClickButtonByName(string buttonName)
         {
             this.ClickByName(buttonName);
         }
 
-        [When(@"I click the submit button by id '(.*)'")]
+        [When(@"I click the button by id '(.*)'")]
         public void WhenIClickSubmitById(string buttonId)
         {
             this.ClickById(buttonId);
         }
 
-        [Then(@"the result should be the same as the html '(.*)', and the element '(.*)'")]
-        public void ThenTheResultShouldBeTheSameAsTheHtmlFile(string fileName, string selector)
+        [When(@"I wait for '(.*)'")]
+        public void WhenIWaitFor(int millionSeconds)
         {
-            var expected = CQ.Create(this.ReadFileString(fileName)).Html();
-
-            var actual = CQ.Create(this.Browser.PageSource).Select(selector).Html();
-
-            actual = this.RemoveWhiteSpace(actual);
-            expected = this.RemoveWhiteSpace(expected);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [Then(@"the current url should be '(.*)'")]
-        public void ThenTheCurrentUrlShouldBe(string expectedUrl)
-        {
-            expectedUrl = this.AddBaseUrl(expectedUrl);
-            var actualUrl = this.Browser.Url;
-
-            Assert.AreEqual(expectedUrl, actualUrl);
+            this.WaitFor(millionSeconds);
         }
     }
 }

@@ -12,7 +12,7 @@ Scenario: What's happening
 	|UserName														|Password														|
 	|OnlineServicesLoginStealth_VisaLoginControl_userNameTextBox	|OnlineServicesLoginStealth_VisaLoginControl_passwordTextBox	|
 	
-	And I click the submit button by id 'OnlineServicesLoginStealth_VisaLoginControl_loginImageButton'
+	And I click the button by id 'OnlineServicesLoginStealth_VisaLoginControl_loginImageButton'
 	
 	And I open the page 'http://www.immigration.govt.nz/registration/whatshappening.aspx'
 	

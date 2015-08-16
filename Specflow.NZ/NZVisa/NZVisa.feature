@@ -15,6 +15,6 @@ Scenario: Get Visa Status
 	|Part 1					|Part 2					|Part 3					|Birthday					|
 	|ctl00$CPH$txtR2Part1	|ctl00$CPH$txtR2Part2	|ctl00$CPH$txtR2Part3	|ctl00$CPH$txtDOB$txtDate	|
 
-	And I click the submit button by name 'ctl00$CPH$btnDOB'
+	And I click the button by name 'ctl00$CPH$btnDOB'
 
 	Then the result should be the same as the html 'NZVisa\NZVisa.html', and the element '.fnstatus'
